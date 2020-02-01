@@ -1,0 +1,105 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font: 18px futura;
+    line-height: 1;
+    color: #ff5578;
+    height: 100vh;
+}
+
+.mouth {
+    position: absolute;
+    top: 6vh;
+    left: 15vw;
+    right: 15vw;
+    width: 70vw;
+    z-index: -1;
+}
+
+.mouth .lips,
+.mouth .teeth {
+    animation: close 0.5s 0s reverse forwards 1;
+    fill: #fff;
+}
+
+.mouth .lips {
+    animation-name: purse;
+    fill: #ff5578;
+}
+
+.mouth.full-animation .lips,
+.mouth.full-animation .teeth {
+    animation: close 0.5s 0s alternate forwards 2;
+}
+
+.mouth.full-animation .lips {
+    animation-name: purse;
+}
+
+a {
+    border-bottom: 0.3ex solid #336;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin: 5vh 0 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #445;
+}
+
+.suggestion {
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 44.5vh;
+    right: 0;
+    left: 0;
+}
+
+.reset-button {
+    border: 0.3ex solid #ff5578;
+    border-radius: 100px;
+    padding: 1rem;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 87vh;
+    left: 50vw;
+}
+
+.reset-button:hover {
+    background: #ff5578;
+    color: #fff;
+}
+
+.reset-button:active {
+    margin: 2px 0 0 2px;
+}
+
+footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #445;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes close {
+    from { transform: translate(0) scale(1); }
+    to { transform: translate(0, 50%) scale(1, 0); }
+}
+
+@keyframes purse {
+    from { transform: translate(0) scale(1); }
+    to { transform: translate(0, 5%) scale(1, 0.9); }
+}
