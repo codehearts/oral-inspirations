@@ -4,7 +4,7 @@
     width="700px">
 </p>
 
-Oral Inspirations is a dead-simple, serverless web app which recommends a place to eat from a list of your design
+Oral Inspirations is a dead-simple, unsettling serverless web app which recommends a place to eat from a configurable list of places
 
 ## Installation
 
@@ -14,4 +14,6 @@ Oral Inspirations is a dead-simple, serverless web app which recommends a place 
 
 ## Usage
 
-Everything runs locally without a web server, just visit `index.html` in your browser. Don't like the suggestion? Just hit "Nah."
+Everything runs locally without a web server, just visit `index.html` in your browser
+
+Don't like the suggestion? Just hit "Nah."
