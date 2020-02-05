@@ -8,13 +8,16 @@ html, body {
     height: 100vh;
 }
 
-.mouth {
-    position: absolute;
-    top: 6vh;
-    left: 15vw;
-    right: 15vw;
+.inspiration-zone {
+    margin: 0 auto;
+    position: relative;
     width: 70vw;
-    z-index: -1;
+}
+
+.mouth {
+    margin: 0 auto;
+    max-height: 65vh;
+    width: 100%;
 }
 
 .mouth .lips,
@@ -56,24 +59,28 @@ h2 {
 }
 
 .suggestion {
+    margin: 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
+    transform: translateY(47%);
     position: absolute;
-    top: 44.5vh;
+    top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
+    max-height: 70vh;
 }
 
 .reset-button {
     border: 0.3ex solid #ff5578;
     border-radius: 100px;
-    padding: 1rem;
+    margin: 0;
+    margin-left: 50%;
+    padding: 1rem 2rem;
+    display: inline-block;
     transform: translateX(-50%);
-    cursor: pointer;
-    font-size: 2rem;
-    position: absolute;
-    top: 87vh;
-    left: 50vw;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .reset-button:hover {
@@ -82,7 +89,8 @@ h2 {
 }
 
 .reset-button:active {
-    margin: 2px 0 0 2px;
+    margin-top: 2px;
+    margin-left: calc(50% + 2px);
 }
 
 footer {
@@ -92,6 +100,29 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+@media (orientation: portrait) {
+    .inspiration-zone {
+        width: 90vw;
+    }
+
+    .mouth {
+        max-height: 55vh;
+    }
+
+    .suggestion {
+        font-size: 0.7rem;
+    }
+
+    .reset-button {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
 }
 
 @keyframes close {
